@@ -1,0 +1,109 @@
+/* ------------- Payment Plan Calculator ------------ */
+.calc-pp {
+  h3 {
+    color: #2E4369;
+  }
+  .calc-pp__plans {
+    p {
+      color:#0a0a0a;
+    }
+    &__nav {
+      &.nav-pills {
+        border: 1px solid #2E4369!important;
+        padding:2px!important;
+        border-radius: 4px!important;
+        .nav-link {
+          color:#2E4369!important;
+          &.active {
+            background-color: #2E4369!important;
+            color:#ffffff!important;
+          }
+        }
+      }
+    }
+    
+    .card {
+      border: 4px solid #A6B1C9; 
+      &-header {
+        color: #2E4369;
+        background-color: #A6B1C9;
+      }
+    }
+    &__section {
+      padding: 5px 0 20px 0;
+      &__price {
+        color: #2E4369;
+      }
+    }
+  }
+  
+  /* ------------- Range Slider ------------ */
+  @mixin rangeTrack {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: #F6F8FA;
+  }
+  @mixin rangeThumb {
+    width: 24px;
+    height: 24px;
+    margin: -8px 0  0;
+    border-radius: 4px;
+    background: #2E4369;
+    cursor: pointer;
+    border: 0 !important;
+  }
+  .calc-pp__slider {
+    color:#0a0a0a;
+    h5 {
+      color:#8a8a8a;
+    }
+    sup.currency-prefix {
+      padding-top: 15px;
+    }
+    .form-range {
+      // Thumb
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none; // needed again for Chrome & Safari
+        @include rangeThumb;
+      }
+  
+      &::-moz-range-thumb {
+        @include rangeThumb;
+      }
+  
+      &::-ms-thumb {
+        @include rangeThumb;
+      }
+  
+      // Track
+      &::-webkit-slider-runnable-track {
+        @include rangeTrack;
+      }
+  
+      &::-moz-range-track {
+        @include rangeTrack;
+      }
+  
+      &::-ms-track {
+        @include rangeTrack;
+      }
+  
+      &:focus { // override outline/background on focus
+        background: none;
+        outline: none;
+      }
+  
+      &::-ms-track { // A little somethin' somethin' for IE
+        width: 100%;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+    }
+  }
+}
+
+
+

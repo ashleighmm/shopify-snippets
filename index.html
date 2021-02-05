@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopify Payment Calculator</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="src/bootstrap.min.css" rel="stylesheet" />
+    <link href="src/style.scss" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="calc-pp">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- <h2>Shopify Payment Calculator</h2> -->
+          </div>
+        </div>
+        <div class="row my-5">
+          <h3 class="fs-4 text text-center pb-4 fw-bold">Payment</h3>
+          <div class="col-sm">
+            <div id="avgOrder" class="calc-pp__slider text-center">
+              <h5 class="fs-5 text">Average Order</h5>
+              <sup class="fs-5 text currency-prefix">$</sup>
+              <label
+                id="avgOrderPrice"
+                for="avgOrderInput"
+                class="form-label calc-pp__slider__label fs-3 text"
+                >150</label
+              >
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="300"
+                id="avgOrderInput"
+                value="150"
+              />
+            </div>
+          </div>
+          <div class="col-sm">
+            <div id="avgOrdersOnline" class="calc-pp__slider text-center">
+              <h5 class="fs-5 text">Orders Online Monthly</h5>
+              <label
+                id="avgOrdersMonthly"
+                for="avgOrdersMonthlyInput"
+                class="form-label calc-pp__slider__label fs-3 text"
+                >150</label
+              >
+              <input
+                type="range"
+                class="form-range"
+                min="0"
+                max="300"
+                id="avgOrdersMonthlyInput"
+                value="150"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container calc-pp__plans">
+        <div class="row">
+          <h3 class="fs-4 text text-center py-4 fw-bold">Plans</h3>
+          <div class="col">
+            <nav
+              class="calc-pp__plans__nav nav nav-pills flex-column flex-sm-row mb-5"
+            >
+              <a
+                class="flex-sm-fill text-sm-center nav-link active fs-6 text"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="tab"
+                id="plansMonthly"
+                >Monthly</a
+              >
+              <a
+                class="flex-sm-fill text-sm-center nav-link fs-6 text"
+                href="#"
+                data-bs-toggle="tab"
+                id="plansAnnual"
+                >Annual (10% off)</a
+              >
+              <a
+                class="flex-sm-fill text-sm-center nav-link fs-6 text"
+                href="#"
+                data-bs-toggle="tab"
+                id="plansBiennial"
+                >Biennial (20% off)</a
+              >
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm mb-4">
+            <div class="card text-center">
+              <div class="card-header text-uppercase fs-5 text">
+                Basic Shopify
+              </div>
+              <div class="card-body">
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text lh-1">You pay</p>
+                  <div class="calc-pp__plans__section__price">
+                    <sup class="fs-5 text currency-prefix">$</sup>
+                    <span id="basicPlanPayment" class="fs-1 text lh-1">29</span>
+                  </div>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text lh-1">Monthly Price</p>
+                  <div class="calc-pp__plans__section__price">
+                    <sup class="fs-6 text currency-prefix">$</sup>
+                    <span class="fs-4 lh-1 text">29</span>
+                  </div>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text">Credit Card Rates</p>
+                  <p class="fs-5 text lh-1">Online</p>
+                  <p class="fs-5 text lh-1">2.9% + 30¢</p>
+                  <p class="fs-5 text lh-1">In Person</p>
+                  <p class="fs-5 text lh-1">2.7% + 0¢</p>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text">TRANSACTIONS FEES</p>
+                  <p class="fs-5 text lh-1">None</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card text-center">
+              <div class="card-header text-uppercase fs-5 text">Shopify</div>
+              <div class="card-body">
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text lh-1">You pay</p>
+                  <div class="calc-pp__plans__section__price">
+                    <sup class="fs-5 text currency-prefix">$</sup>
+                    <span id="shopifyPlanPayment" class="fs-1 text lh-1"
+                      >79</span
+                    >
+                  </div>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text lh-1">Monthly Price</p>
+                  <div class="calc-pp__plans__section__price">
+                    <sup class="fs-6 text currency-prefix">$</sup>
+                    <span class="fs-4 lh-1 text">79</span>
+                  </div>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text">Credit Card Rates</p>
+                  <p class="fs-5 text lh-1">Online</p>
+                  <p class="fs-5 text lh-1">2.6% + 30¢</p>
+                  <p class="fs-5 text lh-1">In Person</p>
+                  <p class="fs-5 text lh-1">2.6% + 0¢</p>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text">TRANSACTIONS FEES</p>
+                  <p class="fs-5 text lh-1">None</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card text-center">
+              <div class="card-header text-uppercase fs-5 text">
+                Shopify Advanced
+              </div>
+              <div class="card-body">
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text lh-1">You pay</p>
+                  <div class="calc-pp__plans__section__price">
+                    <sup class="fs-5 text currency-prefix">$</sup>
+                    <span id="shopifyAdvancedPlanPayment" class="fs-1 text lh-1"
+                      >299</span
+                    >
+                  </div>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text lh-1">Monthly Price</p>
+                  <div class="calc-pp__plans__section__price">
+                    <sup class="fs-6 text currency-prefix">$</sup>
+                    <span class="fs-4 lh-1 text">29</span>
+                  </div>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text">Credit Card Rates</p>
+                  <p class="fs-5 text lh-1">Online</p>
+                  <p class="fs-5 text lh-1">2.4% + 30¢</p>
+                  <p class="fs-5 text lh-1">In Person</p>
+                  <p class="fs-5 text lh-1">2.4% + 0¢</p>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text">TRANSACTIONS FEES</p>
+                  <p class="fs-5 text lh-1">None</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card text-center">
+              <div class="card-header text-uppercase fs-5 text">
+                Shopify Plus
+              </div>
+              <div class="card-body">
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text lh-1">You pay</p>
+                  <div class="calc-pp__plans__section__price">
+                    <sup class="fs-5 text currency-prefix">$</sup>
+                    <span id="shopifyPlusPlanPayment" class="fs-1 text lh-1"
+                      >2000</span
+                    >
+                  </div>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text lh-1">Monthly Price</p>
+                  <div class="calc-pp__plans__section__price">
+                    <sup class="fs-6 text currency-prefix">$</sup>
+                    <span class="fs-4 lh-1 text">29</span>
+                  </div>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text">Credit Card Rates</p>
+                  <p class="fs-5 text lh-1">Online</p>
+                  <p class="fs-5 text lh-1">2.4% + 30¢</p>
+                  <p class="fs-5 text lh-1">In Person</p>
+                  <p class="fs-5 text lh-1">2.4% + 0¢</p>
+                </div>
+                <div class="calc-pp__plans__section">
+                  <p class="text-uppercase fs-6 text">TRANSACTIONS FEES</p>
+                  <p class="fs-5 text lh-1">None</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/scripts/index.js"></script>
+  </body>
+</html>

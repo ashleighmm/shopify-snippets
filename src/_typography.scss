@@ -1,0 +1,35 @@
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$font-stack-header: Nunito,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+$font-weight-header: 400;
+$font-size-header: 32px;
+
+$font-stack-body: Nunito,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+$font-size-base: 15px; // Henseforth known as 1em
+
+$font-size-mobile-input: 16px; // min 16px to prevent zooming
+$spacer: 1rem;
+
+body,p,div,table {
+  font-family: $font-stack-body;
+  font-size: $font-size-base;
+}
+
+main section:first-child { padding-top:0; }
+
+h1,h2,h3,h4,h5,h6, .btn {
+  font-family: $font-stack-header;
+  font-weight: $font-weight-normal;
+}
+
+h1, .h1 { font-size: $font-size-header; }
+h2, .h2 { font-size: floor($font-size-header * 0.9); }
+h3, .h3 { font-size: floor($font-size-header * 0.8); }
+h4, .h4 { font-size: floor($font-size-header * 0.7); }
+h5, .h5 { font-size: floor($font-size-header * 0.6); }
+h6, .h6 { font-size: floor($font-size-header * 0.5); }
+.display-1 { font-size: floor($font-size-header * 1.5); }
+.display-2 { font-size: floor($font-size-header * 1.4); }
+.display-3 { font-size: floor($font-size-header * 1.25); }
+.display-4 { font-size: floor($font-size-header * 1.1); }
